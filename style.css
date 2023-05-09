@@ -14,12 +14,12 @@ body {
 
 #search-input {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px; /* 拉长搜索框 */
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 25px; /* 设置圆角弧度 */
     box-sizing: border-box;
 }
 
@@ -39,9 +39,22 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 25px; /* 设置圆角弧度 */
+}
+
+#search-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px;
 }
 
 .option:hover {
     background-color: #45a049;
+}
+
+/* 新增选中搜索引擎的样式 */
+.option.selected {
+    background-color: #ff9800;
 }
