@@ -71,8 +71,3 @@ body {
 .option.selected {
     background-color: #ff9800;
 }
-
-/* 新增搜索引擎名称的颜色样式 */
-.engine-baidu { color: blue; }
-.engine-bing { color: green; }
-.engine-google { color: yellow; }
