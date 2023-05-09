@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("search-input");
     const searchIcon = document.getElementById("search-icon");
-    const selectedEngineDisplay = document.getElementById("selected-engine-display");
     const engines = {
         baidu: "https://www.baidu.com/s?wd=",
         bing: "https://www.bing.com/search?q=",
@@ -11,18 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let selectedEngine = engines.google;
 
     const buttons = document.querySelectorAll(".option");
-
-    function updateSelectedEngineDisplay(engine) {
-        selectedEngineDisplay.textContent = engine;
-        selectedEngineDisplay.className = `engine-${engine.toLowerCase()}`;
-    }
-
     buttons.forEach(button => {
         button.addEventListener("click", () => {
             buttons.forEach(btn => btn.classList.remove("selected"));
             button.classList.add("selected");
             selectedEngine = engines[button.id];
-            updateSelectedEngineDisplay(button.id);
         });
     });
 
@@ -46,5 +38,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // 默认选择Baidu
     document.getElementById("baidu").classList.add("selected");
     selectedEngine = engines.baidu;
-    updateSelectedEngineDisplay("Baidu");
 });
