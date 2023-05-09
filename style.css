@@ -8,6 +8,15 @@ body {
     background-color: #f0f0f0;
 }
 
+#selected-engine-display {
+    width: 600px;
+    height: 270px;
+    margin-bottom: 20px;
+    font-size: 48px;
+    text-align: center;
+    line-height: 270px;
+}
+
 .container {
     text-align: center;
 }
@@ -43,6 +52,10 @@ body {
 }
 
 #search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -58,3 +71,8 @@ body {
 .option.selected {
     background-color: #ff9800;
 }
+
+/* 新增搜索引擎名称的颜色样式 */
+.engine-baidu { color: blue; }
+.engine-bing { color: green; }
+.engine-google { color: yellow; }
